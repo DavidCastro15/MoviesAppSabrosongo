@@ -1,4 +1,25 @@
-<div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-</div>
+<ion-item-sliding *ngFor="let pelis of peliculas">
+  <ion-item-options side="start">
+    <ion-item-option color="danger" expandable (click)="borrarFav(pelis)">
+      Borrar
+    </ion-item-option>
+  </ion-item-options>
+
+  <ion-item>
+    <ion-card >
+      <img [src]="pelis.backdrop_path | imagen" alt="">
+      <ion-card-content>
+        <ion-title>
+          <h1>
+            {{pelis.title}}
+          </h1></ion-title>
+      </ion-card-content> 
+    </ion-card>
+  </ion-item>
+  <ion-item-options side="end">
+    <ion-item-option color="tertiary" expandable (click)="presentPopover(pelis.homepage)">
+      Generar QR
+      <ion-icon slot="start" name="barcode"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+</ion-item-sliding>

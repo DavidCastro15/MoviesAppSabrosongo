@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-chip color="secondary" slot="end" (click)="salir()">
+      <ion-icon name="caret-back-outline"></ion-icon>
+      <ion-label color="dark">Salir</ion-label>
+    </ion-chip>
+    
+    <ion-title>David</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar *ngIf="identity == 'kids' "(ionChange)="searchMoviesKids($event)"></ion-searchbar>
+  <ion-searchbar *ngIf="identity == 'administrador' "(ionChange)="searchMovies($event)"></ion-searchbar>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item *ngFor="let m of movies">
+    <ion-card>
+      <img [src]="m.poster_path | imagen" alt="">
+      <ion-text>
+        <h1 style="text-align: center;">{{m.title}}</h1>
+      </ion-text>
+    </ion-card>
+  </ion-item>
+  
 </ion-content>

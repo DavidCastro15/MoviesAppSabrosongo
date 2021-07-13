@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-chip color="secondary" slot="end" (click)="salir()">
+      <ion-icon name="caret-back-outline"></ion-icon>
+      <ion-label color="dark">Salir</ion-label>
+    </ion-chip>
+    
+    <ion-title>Invitado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Peliculas Nuevas</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slide-show-guest [movies]="tv"></app-slide-show-guest>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Carteleras</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slide-poster-guest [movies]="tv"></app-slide-poster-guest>
+  
+</ion-content>
