@@ -9,12 +9,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-searchbar *ngIf="identity == 'kids' "(ionChange)="searchMoviesKids($event)"></ion-searchbar>
   <ion-searchbar *ngIf="identity == 'administrador' "(ionChange)="searchMovies($event)"></ion-searchbar>
 
-  <ion-item *ngFor="let m of movies">
-    <ion-card>
+  <ion-item *ngFor="let m of movies" align="center">
+    <ion-card >
       <img [src]="m.poster_path | imagen" alt="">
       <ion-text>
         <h1 style="text-align: center;">{{m.title}}</h1>

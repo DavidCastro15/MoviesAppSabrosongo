@@ -1,23 +1,57 @@
-
-
 <ion-content>
-  <h1 style="text-align: center">Elije un usuario</h1>
+  <div align="center">
+    <h1 style="text-align: center">Elije un usuario</h1>
+    <br />
+    <ion-card class="a" (click)="home()">
+      <ion-card-header>
+        <ion-card-title
+          style="text-align: center; top: 3rem; color: #000000; font-size: 25px"
+          >David</ion-card-title
+        >
+      </ion-card-header>
+    </ion-card>
 
-  <ion-card class="a" (click)="home()">
-    <ion-card-header>
-      <ion-card-title style="text-align: center;top: 3rem;color: #000000; font-size: 25px;">David</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+    <ion-card class="b" (click)="invitado()">
+      <ion-card-header>
+        <ion-card-title
+          style="text-align: center; top: 3rem; color: #000000; font-size: 25px"
+          >Invitado</ion-card-title
+        >
+      </ion-card-header>
+    </ion-card>
 
-  <ion-card class="b" (click)="invitado()">
-    <ion-card-header>
-      <ion-card-title style="text-align: center;top: 3rem;color: #000000; font-size: 25px;">Invitado</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="c"  (click)="kids()" >
-    <ion-card-header>
-      <ion-card-title style="text-align: center;top: 3rem;color: #000000; font-size: 25px;">Kids</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+    <ion-card class="c" (click)="kids()">
+      <ion-card-header>
+        <ion-card-title
+          style="text-align: center; top: 3rem; color: #000000; font-size: 25px"
+          >Kids</ion-card-title
+        >
+      </ion-card-header>
+    </ion-card>
+  </div>
 </ion-content>
+<!--<div align="center">
+  <ion-card  style="height: 200px; width: 150px;" (click)="home()">
+    <img src="/assets/dragon2.jpg" alt="" style="height: 150px; width: 150px;">
+    <ion-card-header>
+      <ion-card-title>David</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+<div align="center">
+  <ion-card  style="height: 200px; width: 150px;"  (click)="invitado()">
+    <img src="/assets/goku.jpg" alt="" style="height: 150px; width: 150px;">
+    <ion-card-header>
+      <ion-card-title>Invitado</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+<div align="center">
+  <ion-card  style="height: 200px; width: 150px;" (click)="kids()" >
+    <img src="/assets/mael.jpg" alt="" style="height: 150px; width: 150px;">
+    <ion-card-header>
+      <ion-card-title>Kids</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+-->

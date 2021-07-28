@@ -16,7 +16,7 @@ export class SlideShowBackdropComponent implements OnInit {
   }
 
   slideOpts = {
-    slidesPerView: 1,
+    slidesPerView: 3.3,
     freeMode:true,
   }
 }
